@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+    id 'war'
+    id 'eclipse-wtp'
+}
+
+repositories { 
+    jcenter()
+}
+
+dependencies {
+	//Servlet
+    compile group: 'org.jboss.weld.servlet', name: 'weld-servlet-core', version: '3.1.5.SP1'
+	providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
+    compile group: 'jstl', name: 'jstl', version: '1.2'
+	
+	//HttpClient    
+    compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.13'
+	
+	//Jackson - json
+	compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.12.1'
+	 
+	compile group: 'org.bndly.common.rest', name: 'org.bndly.common.rest.global-jaxbcontext-provider', version: '1.0.1'
+	 runtime group: 'org.postgresql', name: 'postgresql', version: '42.2.14'
+    compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.7.0'
+
+}
